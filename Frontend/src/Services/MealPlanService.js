@@ -38,7 +38,7 @@ class MealPlanService {
     }
   }
 
-  async CreateMealPlanModal(MealPlanData) {
+  async createMealPlan(MealPlanData) {
     try {
       const accessToken = localStorage.getItem("accessToken");
       const config = {
