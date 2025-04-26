@@ -1,0 +1,106 @@
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Pot base - increased size -->
+  <path d="M160 140 L230 140 C240 140 250 130 250 115 L250 85 C250 70 240 60 230 60 L70 60 C60 60 50 70 50 85 L50 115 C50 130 60 140 70 140 L140 140" fill="#81C784" stroke="#388E3C" stroke-width="3">
+    <animate attributeName="d" 
+             values="M160 140 L230 140 C240 140 250 130 250 115 L250 85 C250 70 240 60 230 60 L70 60 C60 60 50 70 50 85 L50 115 C50 130 60 140 70 140 L140 140;
+                     M155 140 L230 140 C240 140 250 130 250 115 L250 85 C250 70 240 60 230 60 L70 60 C60 60 50 70 50 85 L50 115 C50 130 60 140 70 140 L145 140;
+                     M160 140 L230 140 C240 140 250 130 250 115 L250 85 C250 70 240 60 230 60 L70 60 C60 60 50 70 50 85 L50 115 C50 130 60 140 70 140 L140 140" 
+             dur="3s" 
+             repeatCount="indefinite" />
+  </path>
+  
+  <!-- Pot handles - larger -->
+  <path d="M50 90 Q25 90 25 110 Q25 130 50 130" fill="none" stroke="#388E3C" stroke-width="3">
+    <animate attributeName="d" 
+             values="M50 90 Q25 90 25 110 Q25 130 50 130;
+                     M50 85 Q20 85 20 110 Q20 135 50 135;
+                     M50 90 Q25 90 25 110 Q25 130 50 130" 
+             dur="3s" 
+             repeatCount="indefinite" />
+  </path>
+  <path d="M250 90 Q275 90 275 110 Q275 130 250 130" fill="none" stroke="#388E3C" stroke-width="3">
+    <animate attributeName="d" 
+             values="M250 90 Q275 90 275 110 Q275 130 250 130;
+                     M250 85 Q280 85 280 110 Q280 135 250 135;
+                     M250 90 Q275 90 275 110 Q275 130 250 130" 
+             dur="3s" 
+             repeatCount="indefinite" />
+  </path>
+  
+  <!-- Steam animation - larger -->
+  <path d="M110 60 Q115 45 120 60 Q125 45 130 60 Q135 45 140 60" fill="none" stroke="#FFEB3B" stroke-width="2.5" stroke-linecap="round">
+    <animate attributeName="d" 
+             values="M110 60 Q115 45 120 60 Q125 45 130 60 Q135 45 140 60;
+                     M110 60 Q115 35 120 50 Q125 35 130 50 Q135 35 140 60;
+                     M110 60 Q115 45 120 60 Q125 45 130 60 Q135 45 140 60" 
+             dur="2s" 
+             repeatCount="indefinite" />
+    <animate attributeName="opacity" 
+             values="0.8;1;0.8" 
+             dur="2s" 
+             repeatCount="indefinite" />
+  </path>
+  <path d="M160 60 Q165 45 170 60 Q175 45 180 60" fill="none" stroke="#FFEB3B" stroke-width="2.5" stroke-linecap="round">
+    <animate attributeName="d" 
+             values="M160 60 Q165 45 170 60 Q175 45 180 60;
+                     M160 60 Q165 35 170 50 Q175 35 180 60;
+                     M160 60 Q165 45 170 60 Q175 45 180 60" 
+             dur="2.2s" 
+             repeatCount="indefinite" />
+    <animate attributeName="opacity" 
+             values="0.7;1;0.7" 
+             dur="2.2s" 
+             repeatCount="indefinite" />
+  </path>
+  
+  <!-- Spoon - larger -->
+  <g>
+    <path d="M195 130 L195 95 A12 12 0 1 1 220 95 L220 130" fill="#FFEB3B" stroke="#FFC107" stroke-width="2">
+      <animateTransform attributeName="transform"
+                  type="rotate"
+                  from="0 208 95"
+                  to="10 208 95"
+                  dur="3s"
+                  repeatCount="indefinite"
+                  additive="sum" />
+    </path>
+    <rect x="195" y="130" width="25" height="35" rx="2" fill="#FFEB3B" stroke="#FFC107" stroke-width="2">
+      <animateTransform attributeName="transform"
+                  type="rotate"
+                  from="0 208 130"
+                  to="10 208 130"
+                  dur="3s"
+                  repeatCount="indefinite"
+                  additive="sum" />
+    </rect>
+  </g>
+  
+  <!-- Herb garnish - larger -->
+  <g>
+    <path d="M90 60 C95 45 85 35 80 45 C75 35 65 45 70 60" fill="#4CAF50" stroke="#388E3C" stroke-width="2">
+      <animate attributeName="d" 
+               values="M90 60 C95 45 85 35 80 45 C75 35 65 45 70 60;
+                       M90 60 C100 40 80 30 75 45 C70 30 60 40 70 60;
+                       M90 60 C95 45 85 35 80 45 C75 35 65 45 70 60" 
+               dur="4s" 
+               repeatCount="indefinite" />
+    </path>
+  </g>
+  
+  <!-- Text - made bigger and bolder -->
+  <text x="150" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="18" fill="#212121">Taste Master</text>
+  
+  <!-- Bubbles in pot - larger -->
+  <circle cx="120" cy="105" r="4" fill="#FFFFFF">
+    <animate attributeName="cy" values="105;95;105" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="150" cy="110" r="3" fill="#FFFFFF">
+    <animate attributeName="cy" values="110;100;110" dur="1.8s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="1.8s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="180" cy="108" r="3.5" fill="#FFFFFF">
+    <animate attributeName="cy" values="108;98;108" dur="2.2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="2.2s" repeatCount="indefinite" />
+  </circle>
+</svg>

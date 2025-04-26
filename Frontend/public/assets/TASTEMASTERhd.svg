@@ -1,0 +1,297 @@
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient with animated stars -->
+  <defs>
+    <radialGradient id="bg-gradient" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#e8f5e9">
+        <animate attributeName="stop-color" values="#e8f5e9;#c8e6c9;#e8f5e9" dur="8s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#c8e6c9">
+        <animate attributeName="stop-color" values="#c8e6c9;#a5d6a7;#c8e6c9" dur="8s" repeatCount="indefinite" />
+      </stop>
+    </radialGradient>
+  </defs>
+  
+  
+  <!-- Twinkling stars in background -->
+  <g>
+    <polygon points="30,20 33,26 40,27 35,32 36,39 30,36 24,39 25,32 20,27 27,26" fill="#FFD54F" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="3s" repeatCount="indefinite" />
+    </polygon>
+    
+    <polygon points="260,30 263,36 270,37 265,42 266,49 260,46 254,49 255,42 250,37 257,36" fill="#FFD54F" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="4s" repeatCount="indefinite" />
+    </polygon>
+    
+    <polygon points="50,170 52,174 57,175 53,178 54,183 50,181 46,183 47,178 43,175 48,174" fill="#FFD54F" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.3;0.7" dur="3.5s" repeatCount="indefinite" />
+    </polygon>
+    
+    <polygon points="240,160 242,164 247,165 243,168 244,173 240,171 236,173 237,168 233,165 238,164" fill="#FFD54F" opacity="0.5">
+      <animate attributeName="opacity" values="0.5;0.1;0.5" dur="4.5s" repeatCount="indefinite" />
+    </polygon>
+  </g>
+
+  <!-- Pot base with bubbling effect -->
+  <path d="M160 140 L230 140 C240 140 250 130 250 115 L250 85 C250 70 240 60 230 60 L70 60 C60 60 50 70 50 85 L50 115 C50 130 60 140 70 140 L140 140" fill="#66BB6A" stroke="#388E3C" stroke-width="3">
+    <animate attributeName="d" 
+             values="M160 140 L230 140 C240 140 250 130 250 115 L250 85 C250 70 240 60 230 60 L70 60 C60 60 50 70 50 85 L50 115 C50 130 60 140 70 140 L140 140;
+                     M155 140 L230 140 C240 140 250 130 250 115 L250 85 C250 70 240 60 230 60 L70 60 C60 60 50 70 50 85 L50 115 C50 130 60 140 70 140 L145 140;
+                     M160 140 L230 140 C240 140 250 130 250 115 L250 85 C250 70 240 60 230 60 L70 60 C60 60 50 70 50 85 L50 115 C50 130 60 140 70 140 L140 140" 
+             dur="3s" 
+             repeatCount="indefinite" />
+    <animate attributeName="fill" values="#66BB6A;#81C784;#66BB6A" dur="3s" repeatCount="indefinite" />
+  </path>
+  
+  <!-- Soup surface with ripple effect -->
+  <ellipse cx="150" cy="75" rx="85" ry="15" fill="#4CAF50" stroke="#388E3C" stroke-width="1">
+    <animate attributeName="ry" values="15;13;15" dur="3s" repeatCount="indefinite" />
+    <animate attributeName="fill" values="#4CAF50;#66BB6A;#4CAF50" dur="3s" repeatCount="indefinite" />
+  </ellipse>
+  
+  <!-- Pot handles with bounce effect -->
+  <path d="M50 90 Q25 90 25 110 Q25 130 50 130" fill="none" stroke="#388E3C" stroke-width="3">
+    <animate attributeName="d" 
+             values="M50 90 Q25 90 25 110 Q25 130 50 130;
+                     M50 85 Q20 85 20 110 Q20 135 50 135;
+                     M50 90 Q25 90 25 110 Q25 130 50 130" 
+             dur="3s" 
+             repeatCount="indefinite" />
+  </path>
+  <path d="M250 90 Q275 90 275 110 Q275 130 250 130" fill="none" stroke="#388E3C" stroke-width="3">
+    <animate attributeName="d" 
+             values="M250 90 Q275 90 275 110 Q275 130 250 130;
+                     M250 85 Q280 85 280 110 Q280 135 250 135;
+                     M250 90 Q275 90 275 110 Q275 130 250 130" 
+             dur="3s" 
+             repeatCount="indefinite" />
+  </path>
+  
+  <!-- Carrot 1 - more dynamic motion -->
+  <g>
+    <path d="M80 40 L85 50" stroke="#388E3C" stroke-width="1.2" />
+    <path d="M75 40 C78 35 82 35 85 40 L90 55" fill="#FF8A65" stroke="#E64A19" stroke-width="1.2" />
+    <animateTransform attributeName="transform"
+                type="translate"
+                values="0,0; 15,10; 30,0; 15,-10; 0,0"
+                dur="6s"
+                repeatCount="indefinite" />
+    <animateTransform attributeName="transform"
+                type="rotate"
+                from="0 80 50"
+                to="360 80 50"
+                dur="10s"
+                repeatCount="indefinite"
+                additive="sum" />
+  </g>
+  
+  <!-- Tomato 1 with leaf - enhanced bouncing -->
+  <g>
+    <circle cx="120" cy="40" r="10" fill="#F44336" stroke="#B71C1C" stroke-width="1.2" />
+    <path d="M120 30 C123 32 122 35 120 35 M120 30 C117 32 118 35 120 35" fill="#4CAF50" stroke="#388E3C" stroke-width="1.2" />
+    <animateTransform attributeName="transform"
+                type="translate"
+                values="0,0; 20,15; 40,0; 20,-15; 0,0"
+                dur="7s"
+                repeatCount="indefinite" />
+    <animateTransform attributeName="transform"
+                type="rotate"
+                from="-10 120 40"
+                to="10 120 40"
+                dur="3.5s"
+                repeatCount="indefinite"
+                additive="sum" />
+  </g>
+  
+  <!-- Broccoli - more pronounced movement -->
+  <g>
+    <path d="M180 40 C175 30 185 25 190 35 C195 25 205 30 200 40 C207 30 215 35 208 45" fill="#4CAF50" stroke="#2E7D32" stroke-width="1.2" />
+    <line x1="190" y1="40" x2="190" y2="50" stroke="#2E7D32" stroke-width="1.2" />
+    <animateTransform attributeName="transform"
+                type="translate"
+                values="0,0; -15,15; -30,0; -15,-15; 0,0"
+                dur="8s"
+                repeatCount="indefinite" />
+    <animateTransform attributeName="transform"
+                type="rotate"
+                from="0 190 40"
+                to="-40 190 40"
+                dur="8s"
+                repeatCount="indefinite"
+                additive="sum" />
+  </g>
+
+  <!-- Garlic - enhanced rotation -->
+  <g>
+    <path d="M230 45 C225 35 240 35 235 45" fill="#F5F5F5" stroke="#9E9E9E" stroke-width="1.2" />
+    <path d="M232 35 L234 30" stroke="#9E9E9E" stroke-width="1" />
+    <animateTransform attributeName="transform"
+                type="translate"
+                values="0,0; 15,-10; 30,0; 15,10; 0,0"
+                dur="8s"
+                repeatCount="indefinite" />
+    <animateTransform attributeName="transform"
+                type="rotate"
+                from="0 235 45"
+                to="720 235 45"
+                dur="16s"
+                repeatCount="indefinite"
+                additive="sum" />
+  </g>
+  
+  <!-- Onion - new element -->
+  <g>
+    <path d="M40 40 C40 30 55 30 55 40 C55 50 40 50 40 40" fill="#FFE0B2" stroke="#FB8C00" stroke-width="1.2" />
+    <path d="M47.5 30 L47.5 25" stroke="#4CAF50" stroke-width="1" />
+    <animateTransform attributeName="transform"
+                type="translate"
+                values="0,0; 10,5; 20,0; 10,-5; 0,0"
+                dur="9s"
+                repeatCount="indefinite" />
+    <animateTransform attributeName="transform"
+                type="rotate"
+                from="-15 47.5 40"
+                to="15 47.5 40"
+                dur="4.5s"
+                repeatCount="indefinite"
+                additive="sum" />
+  </g>
+  
+  <!-- Pepper - new element -->
+  <g>
+    <path d="M260 40 C265 30 275 35 270 50" fill="#FF5722" stroke="#D84315" stroke-width="1.2" />
+    <path d="M267 32 L270 25" stroke="#4CAF50" stroke-width="1" />
+    <animateTransform attributeName="transform"
+                type="translate"
+                values="0,0; -8,12; -16,0; -8,-12; 0,0"
+                dur="7.5s"
+                repeatCount="indefinite" />
+    <animateTransform attributeName="transform"
+                type="rotate"
+                from="0 265 40"
+                to="360 265 40"
+                dur="15s"
+                repeatCount="indefinite"
+                additive="sum" />
+  </g>
+  
+  <!-- Enhanced steam animation -->
+  <path d="M110 60 Q115 45 120 60 Q125 45 130 60 Q135 45 140 60" fill="none" stroke="#FFEB3B" stroke-width="2.5" stroke-linecap="round">
+    <animate attributeName="d" 
+             values="M110 60 Q115 45 120 60 Q125 45 130 60 Q135 45 140 60;
+                     M110 60 Q115 30 120 50 Q125 25 130 45 Q135 30 140 60;
+                     M110 60 Q115 45 120 60 Q125 45 130 60 Q135 45 140 60" 
+             dur="2s" 
+             repeatCount="indefinite" />
+    <animate attributeName="opacity" 
+             values="0.8;1;0.8" 
+             dur="2s" 
+             repeatCount="indefinite" />
+    <animate attributeName="stroke" 
+             values="#FFEB3B;#FFF9C4;#FFEB3B" 
+             dur="2s" 
+             repeatCount="indefinite" />
+  </path>
+  <path d="M160 60 Q165 45 170 60 Q175 45 180 60" fill="none" stroke="#FFEB3B" stroke-width="2.5" stroke-linecap="round">
+    <animate attributeName="d" 
+             values="M160 60 Q165 45 170 60 Q175 45 180 60;
+                     M160 60 Q165 30 170 45 Q175 30 180 60;
+                     M160 60 Q165 45 170 60 Q175 45 180 60" 
+             dur="2.2s" 
+             repeatCount="indefinite" />
+    <animate attributeName="opacity" 
+             values="0.7;1;0.7" 
+             dur="2.2s" 
+             repeatCount="indefinite" />
+    <animate attributeName="stroke" 
+             values="#FFEB3B;#FFF9C4;#FFEB3B" 
+             dur="2.2s" 
+             repeatCount="indefinite" />
+  </path>
+  <path d="M135 60 Q140 40 145 60" fill="none" stroke="#FFEB3B" stroke-width="2.5" stroke-linecap="round">
+    <animate attributeName="d" 
+             values="M135 60 Q140 40 145 60;
+                     M135 60 Q140 25 145 45;
+                     M135 60 Q140 40 145 60" 
+             dur="1.8s" 
+             repeatCount="indefinite" />
+    <animate attributeName="opacity" 
+             values="0.6;1;0.6" 
+             dur="1.8s" 
+             repeatCount="indefinite" />
+    <animate attributeName="stroke" 
+             values="#FFEB3B;#FFF9C4;#FFEB3B" 
+             dur="1.8s" 
+             repeatCount="indefinite" />
+  </path>
+
+  
+  <!-- Carrot 2 - inside pot with enhanced visibility -->
+  <path d="M100 80 L105 75" stroke="#388E3C" stroke-width="1.2" />
+  <path d="M95 80 C98 75 102 75 105 80 L110 95" fill="#FF8A65" stroke="#E64A19" stroke-width="1.2">
+    <animateTransform attributeName="transform"
+                type="translate"
+                values="0,0; 5,3; 0,6; -5,3; 0,0"
+                dur="4s"
+                repeatCount="indefinite" />
+    <animate attributeName="fill" values="#FF8A65;#FF7043;#FF8A65" dur="4s" repeatCount="indefinite" />
+  </path>
+  
+  <!-- Tomato 2 - inside pot with enhanced visibility -->
+  <circle cx="140" cy="85" r="8" fill="#F44336" stroke="#B71C1C" stroke-width="1.2">
+    <animateTransform attributeName="transform"
+                type="translate"
+                values="0,0; 6,4; 0,-4; -6,4; 0,0"
+                dur="5s"
+                repeatCount="indefinite" />
+    <animate attributeName="fill" values="#F44336;#E53935;#F44336" dur="5s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- Celery - inside pot -->
+  <path d="M165 85 C165 75 175 75 175 85" fill="#AED581" stroke="#689F38" stroke-width="1.2">
+    <animateTransform attributeName="transform"
+                type="translate"
+                values="0,0; -3,5; -6,0; -3,-5; 0,0"
+                dur="4.5s"
+                repeatCount="indefinite" />
+  </path>
+  
+  <!-- Potato - inside pot -->
+  <ellipse cx="200" cy="90" rx="10" ry="7" fill="#FFE0B2" stroke="#FB8C00" stroke-width="1.2">
+    <animateTransform attributeName="transform"
+                type="translate"
+                values="0,0; -5,3; 0,6; 5,3; 0,0"
+                dur="6s"
+                repeatCount="indefinite" />
+  </ellipse>
+  
+  <!-- Herb garnish - enhanced -->
+  <g>
+    <path d="M90 60 C95 45 85 35 80 45 C75 35 65 45 70 60" fill="#4CAF50" stroke="#388E3C" stroke-width="2">
+      <animate attributeName="d" 
+               values="M90 60 C95 45 85 35 80 45 C75 35 65 45 70 60;
+                       M90 60 C100 40 80 30 75 45 C70 30 60 40 70 60;
+                       M90 60 C95 45 85 35 80 45 C75 35 65 45 70 60" 
+               dur="4s" 
+               repeatCount="indefinite" />
+      <animate attributeName="fill" values="#4CAF50;#66BB6A;#4CAF50" dur="4s" repeatCount="indefinite" />
+    </path>
+  </g>
+  
+<!-- Text - made bigger and bolder -->
+  <text x="150" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="18" fill="#212121">Taste Master</text>
+  
+  
+   <!-- Bubbles in pot - larger -->
+  <circle cx="120" cy="105" r="4" fill="#FFFFFF">
+    <animate attributeName="cy" values="105;95;105" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="150" cy="110" r="3" fill="#FFFFFF">
+    <animate attributeName="cy" values="110;100;110" dur="1.8s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="1.8s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="180" cy="108" r="3.5" fill="#FFFFFF">
+    <animate attributeName="cy" values="108;98;108" dur="2.2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="2.2s" repeatCount="indefinite" />
+  </circle>
+</svg>
