@@ -157,22 +157,18 @@ const UpdateSkillShareModal = () => {
                     style={{ width: '100%', height: 120, objectFit: 'cover' }}
                   />
                 )}
-                <Button
-  type="text"
-  danger
-  icon={<DeleteOutlined />}
-  onClick={() => removeMediaFile(file.uid)}
-  style={{
-    position: 'absolute',
-    top: '5px', // Add a little space from the top
-    right: '5px', // Add a little space from the right
-    background: 'rgba(255, 255, 255, 0.7)',
-    borderRadius: '50%', // Optional: makes the button look more circular
-    padding: '5px', // Optional: adds padding around the icon
-    zIndex: 10, // Ensures the button appears on top of other elements
-  }}
-/>
-
+                <Button 
+                  type="text" 
+                  danger 
+                  icon={<DeleteOutlined />} 
+                  onClick={() => removeMediaFile(file.uid)}
+                  style={{ 
+                    position: 'absolute', 
+                    top: 0, 
+                    right: 0,
+                    background: 'rgba(255, 255, 255, 0.7)'
+                  }}
+                />
               </div>
             </Col>
           ))}
@@ -242,19 +238,24 @@ const UpdateSkillShareModal = () => {
         </Form.Item>
         
         <Form.Item>
-          <Button 
-            type="primary" 
-            htmlType="submit" 
-            loading={loading} 
-            disabled={mediaFiles.length === 0 || uploadingMedia}
-            style={{
-              background: '#FF6B35', 
-              borderColor: '#FF6B35',
-            }}
-          >
-            Update Share Skill
-          </Button>
-        </Form.Item>
+  <Button
+    type="primary"
+    htmlType="submit"
+    loading={loading}
+    disabled={mediaFiles.length === 0 || uploadingMedia}
+    style={{
+      backgroundColor: '#FF6B35',
+      borderColor: '#FF6B35',
+      color: '#ffffff', // Ensures text color is white
+      fontWeight: 'bold', // Makes button text bold
+      padding: '8px 16px', // Adds a bit more padding
+      borderRadius: '6px', // Slightly rounded corners
+    }}
+  >
+    Update Skill Share
+  </Button>
+</Form.Item>
+
       </Form>
     </Modal>
   );
