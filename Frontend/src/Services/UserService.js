@@ -33,23 +33,21 @@ const UserService = {
 
   async getProfileById(id) {
     try {
-      const accessToken = localStorage.getItem('accessToken');
-      if (!accessToken) {
-        throw new Error('Access token is missing.');
-      }
-  
-      const { data } = await axios.get(`${BASE_URL}/userProfiles/${id}`, {
+      const accessToken = localStorage.getItem("accessToken");
+      const config = {
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },
-      });
-  
-      return data;
+      };
+      const response = await axios.get(
+        `${BASE_URL}/userProfiles/${id}`,
+        config
+      );
+      return response.data;
     } catch (error) {
-      console.error('Error fetching profile by ID:', error);
-      throw new Error('Failed to fetch user profile.');
+      throw new Error("An error occurred while checking if the user exists");
     }
-  }  
+  },
 
   async getProfiles() {
   try {
