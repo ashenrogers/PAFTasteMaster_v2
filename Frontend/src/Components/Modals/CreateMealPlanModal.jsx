@@ -192,19 +192,15 @@ const CreateMealPlanModal = () => {
           rules={[{ required: true, message: "Please add a plan name" }]}
         >
           <Input 
-  placeholder="E.g., Muscle Building Plan, Weight Loss Nutrition" 
-  style={{ 
-    borderRadius: 16, // Slightly more rounded corners for a smoother look
-    border: `1px solid ${themeColors.primary}`, // Changed border color to primary theme color
-    backgroundColor: themeColors.surface, // Lighter background for a subtle contrast
-    padding: "12px 18px", // Increased padding for more room inside the input
-    fontSize: "14px", // Reduced font size slightly for better text fit
-    color: themeColors.textPrimary, // Set text color to primary theme color for better visibility
-    transition: "all 0.3s ease", // Smooth transition for focus effect
-    boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)", // Added a light shadow effect for depth
-  }}
-/
-
+            placeholder="E.g.., Muscle Building Plan, Weight Loss Nutrition" 
+            style={{ 
+              borderRadius: 12, 
+              border: `1px solid ${themeColors.border}`,
+              backgroundColor: themeColors.cardBg,
+              padding: "10px 16px",
+              fontSize: "15px"
+            }}
+          />
         </Form.Item>
         
         <Form.Item
