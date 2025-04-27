@@ -480,7 +480,7 @@ const CreateStoryModal = () => {
                             borderRadius: '8px'
                           }}
                         >
-                          Change Image
+                          Change an Image
                         </Button>
                       </Upload>
                     </div>
