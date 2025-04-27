@@ -64,7 +64,7 @@ const Header = () => {
           <h4>Learn Techniques & Connect</h4>
           <h1 className="section__header">Elevate Your Culinary Journey!</h1>
           <p>
-            Master cooking techniques, connect with food enthusiasts, and access personalized recipes. Join Taste Master and achieve your culinary goals with our supportive community.
+            Master cooking techniques, connect with food enthusiasts, and access personalized recipes. Join with Taste Master and achieve your culinary goals with our supportive community.
           </p>
           <div className="header__btn">
             <button
