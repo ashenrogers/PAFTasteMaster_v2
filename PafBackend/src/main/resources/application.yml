@@ -13,7 +13,7 @@ spring:
     active: dev
   data:
     mongodb:
-      uri: mongodb+srv://paftest2:paftest2@cluster0.pisau6d.mongodb.net/
+      uri: mongodb+srv://Ashen:ashen2001@paf.qtc50kh.mongodb.net/
       database: ${MONGODB_DB}
 
   security:
