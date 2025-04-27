@@ -141,20 +141,16 @@ const CreatePostModal = () => {
   return (
     <Modal
       title={
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-  <div 
-    style={{ 
-      width: 8, 
-      height: 30, 
-      backgroundColor: "#4CAF50",  // New color for the bar (green)
-      borderRadius: "8px",          // Rounded corners with more pronounced curvature
-      marginRight: "20px"           // Increased space between the elements
-    }} 
-  />
-  <div style={{ color: "#333", fontSize: "16px", fontWeight: "bold" }}>
-    Your text here
-  </div>
-</div>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <div 
+            style={{ 
+              width: 6, 
+              height: 24, 
+              backgroundColor: themeColors.primary, 
+              borderRadius: 3, 
+              marginRight: 12 
+            }} 
+          />
           <Title level={4} style={{ margin: 0, color: themeColors.textPrimary }}>
             Share Your Culinary Journey
           </Title>
