@@ -112,17 +112,24 @@ const CreateSkillShareModal = () => {
   };
 
   const validateVideoDuration = (file) => {
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
       const video = document.createElement('video');
       video.preload = 'metadata';
-      
-      video.onloadedmetadata = function() {
-        window.URL.revokeObjectURL(video.src);
+  
+      video.onloadedmetadata = () => {
+        URL.revokeObjectURL(video.src);
         resolve(video.duration <= 30);
       };
-      
+  
+      video.onerror = () => {
+        URL.revokeObjectURL(video.src);
+        reject(new Error('Invalid video file.'));
+      };
+  
       video.src = URL.createObjectURL(file);
     });
+  };
+  
   };
 
   const removeMediaFile = (uid) => {
