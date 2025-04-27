@@ -17,7 +17,7 @@ class StoryUpdateService {
       );
       return response.data;
     } catch (error) {
-      throw new Error("Failed to create Learning Plan story");
+      throw new Error("Ooops...Failed to create Learning Plan story");
     }
   }
 
@@ -35,7 +35,7 @@ class StoryUpdateService {
       );
       return response.data;
     } catch (error) {
-      throw new Error("Failed to get Learning Plan stories ");
+      throw new Error("Ooops...Failed to get Learning Plan stories ");
     }
   }
 
@@ -53,7 +53,7 @@ class StoryUpdateService {
       );
       return response.data;
     } catch (error) {
-      throw new Error("Failed to get all Learning Plan stories");
+      throw new Error("Ooops... Failed to get all Learning Plan stories");
     }
   }
 
@@ -70,7 +70,7 @@ class StoryUpdateService {
         config
       );
     } catch (error) {
-      throw new Error("Failed to delete Learning Plan story");
+      throw new Error("Ooops...Failed to delete the Learning Plan story");
     }
   }
   async UpdateStory(updateId, workoutStoryData) {
@@ -88,7 +88,7 @@ class StoryUpdateService {
       );
       return response.data;
     } catch (error) {
-      throw new Error("Failed to update Learning Plan story");
+      throw new Error("Ooops..Failed to update the Learning Plan story");
     }
   }
 }
