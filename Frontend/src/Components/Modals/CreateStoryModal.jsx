@@ -217,7 +217,7 @@ const CreateStoryModal = () => {
                 label={
                   <span style={{ display: 'flex', alignItems: 'center', color: themeColors.textPrimary }}>
                     <EditOutlined style={{ marginRight: '8px', color: themeColors.primary }} />
-                    Plan Title
+                    <b>Plan Title</b>
                   </span>
                 } 
                 name="title" 
@@ -282,7 +282,7 @@ const CreateStoryModal = () => {
                       name="exerciseType"
                     >
                       <Input
-                        placeholder="e.g. Programming, Language, etc"
+                        placeholder="e.g. Self-study, Tutorial, etc"
                         name="exerciseType"
                         value={formData.exerciseType}
                         onChange={handleInputChange}
