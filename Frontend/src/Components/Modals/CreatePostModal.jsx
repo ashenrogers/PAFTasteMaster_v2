@@ -8,19 +8,19 @@ import PostService from "../../Services/PostService";
 
 // Modern color scheme
 const themeColors = {
-  primary: "#6C63FF", // Soft purple for primary actions
-  secondary: "#A084E8", // Light violet for secondary elements
-  accent: "#FFD93D", // Soft gold for highlights
-  background: "#F8F9FA", // Almost white background
-  surface: "#FFFFFF", // White surface for cards and inputs
-  cardBg: "#FFFFFF", 
-  textPrimary: "#2C3E50", // Deep navy blue for text
-  textSecondary: "#7F8C8D", // Soft gray for secondary text
-  border: "#DCDCDC", // Light gray border
-  hover: "#5D54E1", // Deeper purple for hover state
-  danger: "#E74C3C", // Bright red for errors
-  success: "#27AE60", // Green for success
-  gradient: "linear-gradient(135deg, #6C63FF 0%, #A084E8 100%)", // Violet gradient
+  primary: "#4CAF50", // Basil green for primary actions
+  secondary: "#81C784", // Fresh green for secondary elements
+  accent: "#FFEB3B", // Lemon yellow for highlights and accents
+  background: "#F1F8E9", // Light mint background
+  surface: "#FFFFFF", // White surface for content areas
+  cardBg: "#FFFFFF", // White background for recipe cards
+  textPrimary: "#212121", // Dark gray for primary text
+  textSecondary: "#424242", // Medium gray for secondary text
+  border: "#C8E6C9", // Light green border
+  hover: "#388E3C", // Deeper green for hover states
+  danger: "#D32F2F", // Red for warnings/errors
+  success: "#2E7D32", // Dark green for success states
+  gradient: "linear-gradient(135deg, #4CAF50 0%, #81C784 100%)", // Green gradient
 }
 
 const { Title, Text } = Typography;
@@ -131,11 +131,11 @@ const CreatePostModal = () => {
   };
 
   // Animation styles for floating vegetables
-  const floatingVegetables = {
-    position: "absolute",
-    zIndex: 0,
-    opacity: 0.5,
-    animation: "float 15s infinite ease-in-out",
+const floatingVegetables = {
+  position: "absolute",
+  zIndex: 0,
+  opacity:
+
   };
 
   return (
