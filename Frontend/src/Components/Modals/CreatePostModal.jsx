@@ -135,7 +135,7 @@ const CreatePostModal = () => {
     position: "absolute",
     zIndex: 0,
     opacity: 0.5,
-    animation: "float 30s infinite ease-in-out",
+    animation: "float 20s infinite ease-in-out",
   };
 
   return (
