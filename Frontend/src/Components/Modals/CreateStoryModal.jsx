@@ -282,7 +282,7 @@ const CreateStoryModal = () => {
                       name="exerciseType"
                     >
                       <Input
-                        placeholder="e.g. Programming, Language"
+                        placeholder="e.g. Programming, Language, etc"
                         name="exerciseType"
                         value={formData.exerciseType}
                         onChange={handleInputChange}
