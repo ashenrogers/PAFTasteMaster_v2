@@ -238,24 +238,19 @@ const UpdateSkillShareModal = () => {
         </Form.Item>
         
         <Form.Item>
-  <Button
-    type="primary"
-    htmlType="submit"
-    loading={loading}
-    disabled={mediaFiles.length === 0 || uploadingMedia}
-    style={{
-      backgroundColor: '#FF6B35',
-      borderColor: '#FF6B35',
-      color: '#ffffff', // Ensures text color is white
-      fontWeight: 'bold', // Makes button text bold
-      padding: '8px 16px', // Adds a bit more padding
-      borderRadius: '6px', // Slightly rounded corners
-    }}
-  >
-    Update Skill Share
-  </Button>
-</Form.Item>
-
+          <Button 
+            type="primary" 
+            htmlType="submit" 
+            loading={loading} 
+            disabled={mediaFiles.length === 0 || uploadingMedia}
+            style={{
+              background: '#FF6B35', 
+              borderColor: '#FF6B35',
+            }}
+          >
+            Update Share Skill
+          </Button>
+        </Form.Item>
       </Form>
     </Modal>
   );
