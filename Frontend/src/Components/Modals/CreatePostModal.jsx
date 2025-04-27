@@ -131,11 +131,11 @@ const CreatePostModal = () => {
   };
 
   // Animation styles for floating vegetables
-const floatingVegetables = {
-  position: "absolute",
-  zIndex: 0,
-  opacity:
-
+  const floatingVegetables = {
+    position: "absolute",
+    zIndex: 0,
+    opacity: 0.5,
+    animation: "float 15s infinite ease-in-out",
   };
 
   return (
