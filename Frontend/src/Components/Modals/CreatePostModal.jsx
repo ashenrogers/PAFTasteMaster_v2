@@ -151,8 +151,8 @@ const CreatePostModal = () => {
               marginRight: 12 
             }} 
           />
-          <Title level={4} style={{ margin: 0, color: themeColors.textPrimary }}>
-            Share Your Culinary Journey
+          <Title level={7} style={{ margin: 1, color: themeColors.textPrimary textAlign:"center" }}>
+            Share Your Good Recipe  ...
           </Title>
         </div>
       }
