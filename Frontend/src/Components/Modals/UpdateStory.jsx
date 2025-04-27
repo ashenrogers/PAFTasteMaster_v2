@@ -413,7 +413,7 @@ const UpdateStory = () => {
                 label={
                   <span style={{ display: 'flex', alignItems: 'center', color: themeColors.textPrimary }}>
                     <EditOutlined style={{ marginRight: '8px', color: themeColors.primary }} />
-                    Plan Title
+                    <b>Plan Title</b>
                   </span>
                 } 
                 name="title" 
@@ -506,6 +506,10 @@ const UpdateStory = () => {
                         }}
                         value={formData.timestamp}
                         onChange={handleDateChange}
+                        disabledDate={(current) => {
+                        // Disable all dates before today
+                        return current && current < moment().startOf('day');
+                       }}                          
                       />
                     </Form.Item>
                   </Col>
