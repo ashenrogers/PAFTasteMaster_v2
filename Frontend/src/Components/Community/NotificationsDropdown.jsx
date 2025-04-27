@@ -72,7 +72,7 @@ const NotificationsDropdown = () => {
                 onClick={markAllNotificationsAsRead} 
                 style={{ marginRight: 10 }}
               >
-                <CheckOutlined /> Mark all read
+                <CheckOutlined /> Mark all as read
               </a>
             )}
           </div>
