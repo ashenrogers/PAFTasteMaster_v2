@@ -45,15 +45,15 @@ const UpdateSkillShareModal = () => {
       const values = await form.validateFields();
 
       // Call the service to update the Skill Share
-const updatedData = 
-  ...snap.selectedSkillShareToUpdate,
-  ...values,
-  mediaUrls: mediaFiles.map(({ url }) => url),
-  mediaTypes: mediaFiles.map(({ type }) => type),
-};
-
-await SkillShareService.updateSkillShare(snap.selectedSkillShareToUpdate.id, updatedData);
-
+      await SkillShareService.updateSkillShare(
+        snap.seletedSkillShareToUpdate.id,
+        {
+          ...snap.seletedSkillShareToUpdate,
+          ...values,
+          mediaUrls: mediaFiles.map(file => file.url),
+          mediaTypes: mediaFiles.map(file => file.type)
+        }
+      );
       
       state.SkillShares = await SkillShareService.getAllSkillShares();
       
@@ -86,14 +86,21 @@ await SkillShareService.updateSkillShare(snap.selectedSkillShareToUpdate.id, upd
       const fileType = file.type.split("/")[0];
       
       // Validate video duration if it's a video
-      if (fileType === "video") {
-        const isValid = await validateVideoDuration(file);
-        if (!isValid) {
-          message.error("Video must be 30 seconds or less.");
-          setUploadingMedia(false);
-          return false;
-        }
-      }
+if (fileType === "video") {
+  try {
+    const isValid = await validateVideoDuration(file);
+    if (!isValid) {
+      message.error("Video must be 30 seconds or less.");
+      setUploadingMedia(false);
+      return false;
+    }
+  } catch (error) {
+    console.error("Error validating video duration:", error);
+    message.error("There was an error validating the video duration.");
+    setUploadingMedia(false);
+    return false;
+  }
+
       
       const url = await uploader.uploadFile(file, "posts");
       
