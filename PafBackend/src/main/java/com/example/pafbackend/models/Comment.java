@@ -41,6 +41,8 @@ public class Comment {
         this.userId = userId;
     }
 
+
+    
     public String getCommentText() {
         return commentText;
     }
