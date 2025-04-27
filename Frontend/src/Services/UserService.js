@@ -5,15 +5,12 @@ const UserService = {
   // Existing methods
   async checkIfUserExists(username) {
     try {
-      const { data } = await axios.get(`${BASE_URL}/users/exists/${encodeURIComponent(username)}`);
-      return data;
+      const response = await axios.get(`${BASE_URL}/users/exists/${username}`);
+      return response.data;
     } catch (error) {
-      console.error('Error checking user existence:', error);
-      throw new Error('Failed to check if user exists.');
+      throw new Error("An error occurred while checking if the user exists");
     }
   },
-};
-
 
   async createProfile(body) {
     try {
