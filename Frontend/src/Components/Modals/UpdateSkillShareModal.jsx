@@ -25,19 +25,21 @@ const UpdateSkillShareModal = () => {
       });
 
       // Load existing media files
-      if (snap.seletedSkillShareToUpdate.mediaUrls && snap.seletedSkillShareToUpdate.mediaUrls.length > 0) {
-        const existingFiles = snap.seletedSkillShareToUpdate.mediaUrls.map((url, index) => ({
-          uid: `existing-${index}`,
-          url: url,
-          type: snap.seletedSkillShareToUpdate.mediaTypes ? 
-                snap.seletedSkillShareToUpdate.mediaTypes[index] : 
-                url.includes('.mp4') ? 'video' : 'image',
-          name: `Media ${index + 1}`
-        }));
-        setMediaFiles(existingFiles);
-      }
-    }
-  }, [snap.seletedSkillShareToUpdate, form]);
+if (snap.selectedSkillShareToUpdate.mediaUrls?.length > 0) {
+  const existingFiles = snap.selectedSkillShareToUpdate.mediaUrls.map((url, index) => {
+    const mediaType = snap.selectedSkillShareToUpdate.mediaTypes?.[index] || (url.includes('.mp4') ? 'video' : 'image');
+    
+    return {
+      uid: `existing-${index}`,
+      url,
+      type: mediaType,
+      name: `Media ${index + 1}`,
+    };
+  });
+
+  setMediaFiles(existingFiles);
+}
+
 
   const handleSubmit = async () => {
     try {
