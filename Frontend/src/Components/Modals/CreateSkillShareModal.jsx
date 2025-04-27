@@ -36,31 +36,36 @@ const CreateSkillShareModal = () => {
   const handleSubmit = async () => {
   setLoading(true);
   
-  try {
-    const values = await form.validateFields();
-
-    const payload = {
-      ...values,
-      userId: snap.currentUser?.uid,
-      mediaUrls: mediaFiles.map(({ url }) => url),
-      mediaTypes: mediaFiles.map(({ type }) => type),
-    };
-
-    await SkillShareService.createSkillShare(payload);
-
-    state.SkillShares = await SkillShareService.getAllSkillShares();
-
-    // Reset the form and close the modal
-    form.resetFields();
-    setMediaFiles([]);
-    state.createSkillShareOpened = false;
-
-  } catch (error) {
-    console.error('Failed to create Skill Share:', error);
-  } finally {
-    setLoading(false);
-  }
-
+  const handleSubmit = async () => {
+    setLoading(true);
+    
+    try {
+      const values = await form.validateFields();
+  
+      const payload = {
+        ...values,
+        userId: snap.currentUser?.uid,
+        mediaUrls: mediaFiles.map(({ url }) => url),
+        mediaTypes: mediaFiles.map(({ type }) => type),
+      };
+  
+      await SkillShareService.createSkillShare(payload);
+  
+      state.SkillShares = await SkillShareService.getAllSkillShares();
+  
+      // Reset the form and close the modal
+      form.resetFields();
+      setMediaFiles([]);
+      state.createSkillShareOpened = false;
+  
+    } catch (error) {
+      console.error('Failed to create Skill Share:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+  
+};
 
 
   // Use a custom file input instead of Ant's Upload component to avoid duplication issues
