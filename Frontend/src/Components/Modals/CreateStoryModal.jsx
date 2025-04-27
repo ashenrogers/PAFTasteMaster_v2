@@ -127,7 +127,7 @@ const CreateStoryModal = () => {
         );
         setUploadedImage(url);
       } catch (error) {
-        console.error("Error uploading image:", error);
+        console.error("Error in uploading image:", error);
       } finally {
         setImageUploading(false);
       }
