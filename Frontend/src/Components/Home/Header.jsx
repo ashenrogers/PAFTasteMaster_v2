@@ -51,7 +51,7 @@ const Header = () => {
               }}
               className="btn"
             >
-              Join Taste Master
+              Join with Taste Master
             </button>
           </li>
         </ul>
