@@ -310,6 +310,10 @@ const CreateStoryModal = () => {
                         }}
                         value={formData.timestamp}
                         onChange={handleDateChange}
+                        disabledDate={(current) => {
+                          // Disable all dates before today
+                          return current && current < moment().startOf('day');
+                        }}
                       />
                     </Form.Item>
                   </Col>
