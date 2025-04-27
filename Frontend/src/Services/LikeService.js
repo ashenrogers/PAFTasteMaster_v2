@@ -30,7 +30,7 @@ class LikeService {
       if (response.status === 201) {
         try {
           const body = {
-            userId: userId
+            userId: userId,
             message: "You have a new like",
             description: "Your post liked by " + username,
           };
