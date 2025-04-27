@@ -33,23 +33,26 @@ class CommentService {
     }
   }
 
-  async getCommentsByPostId(postId) {
-    try {
-      const accessToken = localStorage.getItem("accessToken");
-      const config = {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-      };
-      const response = await axios.get(
-        `${BASE_URL}/comments/post/${postId}`,
-        config
-      );
-      return response.data;
-    } catch (error) {
-      throw new Error("Failed to get comments by post ID");
+  // Inside the CommentService class
+
+// Get comments by post ID with enhanced error handling and token retrieval
+async getCommentsByPostId(postId) {
+  try {
+    const config = this.getAuthConfig(); // Using the centralized function to get auth config
+    const response = await axios.get(`${BASE_URL}/comments/post/${postId}`, config);
+
+    if (response.status === 200) {
+      return response.data; // Return comments data if successful
+    } else {
+      // If the response status is not 200, handle it here
+      this.handleError(null, `Failed to get comments for post ID: ${postId}`);
     }
+  } catch (error) {
+    // Enhanced error handling with custom error messages
+    this.handleError(error, `Failed to get comments for post ID: ${postId}`);
   }
+}
+
 
   async updateComment(commentId, commentData) {
     try {
