@@ -533,7 +533,7 @@ const CreateStoryModal = () => {
                               border: 'none'
                             }}
                           >
-                            Select Image
+                            Select an Image
                           </Button>
                         </div>
                       </Upload>
