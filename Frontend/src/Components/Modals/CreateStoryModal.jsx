@@ -375,7 +375,7 @@ const CreateStoryModal = () => {
                       name="category"
                     >
                       <Select
-                        placeholder="Select category"
+                        placeholder="Select a category"
                         style={{ width: "100%" }}
                         value={formData.category}
                         onChange={handleCategoryChange}
