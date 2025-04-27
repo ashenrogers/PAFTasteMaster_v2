@@ -304,11 +304,10 @@ const CreatePostModal = () => {
         {imageUploading && (
           <div style={{ 
             textAlign: "center", 
-            margin: "20px 0", 
-            padding: "16px", 
-            backgroundColor: "#f4f4f4",  // New background color for a soft surface
-            borderRadius: "12px",         // Increased border radius for a smoother look
-            boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",  // Adding shadow for depth
+            margin: "16px 0", 
+            padding: "12px", 
+            backgroundColor: themeColors.surface, 
+            borderRadius: 8 
           }}>
             <Text type="secondary">Plating your masterpiece...</Text>
           </div>
