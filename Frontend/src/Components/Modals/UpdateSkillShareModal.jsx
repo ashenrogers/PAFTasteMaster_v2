@@ -86,21 +86,14 @@ const UpdateSkillShareModal = () => {
       const fileType = file.type.split("/")[0];
       
       // Validate video duration if it's a video
-if (fileType === "video") {
-  try {
-    const isValid = await validateVideoDuration(file);
-    if (!isValid) {
-      message.error("Video must be 30 seconds or less.");
-      setUploadingMedia(false);
-      return false;
-    }
-  } catch (error) {
-    console.error("Error validating video duration:", error);
-    message.error("There was an error validating the video duration.");
-    setUploadingMedia(false);
-    return false;
-  }
-
+      if (fileType === "video") {
+        const isValid = await validateVideoDuration(file);
+        if (!isValid) {
+          message.error("Video must be 30 seconds or less.");
+          setUploadingMedia(false);
+          return false;
+        }
+      }
       
       const url = await uploader.uploadFile(file, "posts");
       
@@ -164,18 +157,22 @@ if (fileType === "video") {
                     style={{ width: '100%', height: 120, objectFit: 'cover' }}
                   />
                 )}
-                <Button 
-                  type="text" 
-                  danger 
-                  icon={<DeleteOutlined />} 
-                  onClick={() => removeMediaFile(file.uid)}
-                  style={{ 
-                    position: 'absolute', 
-                    top: 0, 
-                    right: 0,
-                    background: 'rgba(255, 255, 255, 0.7)'
-                  }}
-                />
+                <Button
+  type="text"
+  danger
+  icon={<DeleteOutlined />}
+  onClick={() => removeMediaFile(file.uid)}
+  style={{
+    position: 'absolute',
+    top: '5px', // Add a little space from the top
+    right: '5px', // Add a little space from the right
+    background: 'rgba(255, 255, 255, 0.7)',
+    borderRadius: '50%', // Optional: makes the button look more circular
+    padding: '5px', // Optional: adds padding around the icon
+    zIndex: 10, // Ensures the button appears on top of other elements
+  }}
+/>
+
               </div>
             </Col>
           ))}
