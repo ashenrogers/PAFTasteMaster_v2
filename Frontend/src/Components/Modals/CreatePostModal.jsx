@@ -19,7 +19,7 @@ const themeColors = {
   border: "#C8E6C9", // Light green border
   hover: "#388E3C", // Deeper green for hover states
   danger: "#D32F2F", // Red for warnings/errors
-  success: "#2E7D32", // Dark green for success states
+  success: "#FFFFFF", // White for success states
   gradient: "linear-gradient(135deg, #4CAF50 0%, #81C784 100%)", // Green gradient
 }
 
