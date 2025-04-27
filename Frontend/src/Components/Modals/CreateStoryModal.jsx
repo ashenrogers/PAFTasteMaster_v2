@@ -301,7 +301,7 @@ const CreateStoryModal = () => {
                       name="timestamp"
                     >
                       <DatePicker
-                        placeholder="Select date"
+                        placeholder="Pick a date"
                         style={{ 
                           width: "100%", 
                           borderRadius: '8px', 
