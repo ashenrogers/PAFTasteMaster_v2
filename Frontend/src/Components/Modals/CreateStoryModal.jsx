@@ -521,7 +521,7 @@ const CreateStoryModal = () => {
                           </div>
                           <div>
                             <Text style={{ fontSize: '14px', color: themeColors.textSecondary }}>
-                              Upload an image for your learning plan
+                              Upload an image for your learning plan.
                             </Text>
                           </div>
                           <Button
