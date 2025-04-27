@@ -192,15 +192,19 @@ const CreateMealPlanModal = () => {
           rules={[{ required: true, message: "Please add a plan name" }]}
         >
           <Input 
-            placeholder="E.g.., Muscle Building Plan, Weight Loss Nutrition" 
-            style={{ 
-              borderRadius: 12, 
-              border: `1px solid ${themeColors.border}`,
-              backgroundColor: themeColors.cardBg,
-              padding: "10px 16px",
-              fontSize: "15px"
-            }}
-          />
+  placeholder="E.g., Muscle Building Plan, Weight Loss Nutrition" 
+  style={{ 
+    borderRadius: 16, // Increased border radius for a more modern, rounded look
+    border: `1px solid ${themeColors.primary}`, // Updated to primary theme color for consistency
+    backgroundColor: themeColors.surface, // Lighter background color for subtle contrast
+    padding: "12px 18px", // Increased padding for better input area space
+    fontSize: "14px", // Slightly reduced font size for a more compact appearance
+    color: themeColors.textPrimary, // Ensure the text color matches your theme's primary text color
+    transition: "all 0.3s ease", // Smooth transition for focus or hover states
+    boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)", // Soft shadow effect for a bit of depth
+  }}
+/>
+
         </Form.Item>
         
         <Form.Item
@@ -209,16 +213,19 @@ const CreateMealPlanModal = () => {
           rules={[{ required: true, message: "Please enter description" }]}
         >
           <Input.TextArea 
-            placeholder="Describe your nutrition goals, dietary preferences, and any restrictions" 
-            rows={3}
-            style={{ 
-              borderRadius: 12, 
-              border: `1px solid ${themeColors.border}`,
-              backgroundColor: themeColors.cardBg,
-              padding: "10px 16px",
-              fontSize: "15px"
-            }}
-          />
+  placeholder="Describe your nutrition goals, dietary preferences, and any restrictions" 
+  rows={4} // Increased the row count for a bit more space
+  style={{ 
+    borderRadius: 16, // Increased border radius for a smoother, more modern feel
+    border: `1px solid ${themeColors.primary}`, // Changed border color to primary theme color
+    backgroundColor: themeColors.surface, // Lighter background color for subtle contrast
+    padding: "12px 18px", // Increased padding for better input area space
+    fontSize: "14px", // Slightly reduced font size for a more compact look
+    color: themeColors.textPrimary, // Ensure the text color matches the primary theme
+    transition: "all 0.3s ease", // Smooth transition for focus state
+    boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)", // Soft shadow effect for added depth
+  }}
+/>
         </Form.Item>
 
         {/* Nutrition Information Section */}
