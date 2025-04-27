@@ -12,7 +12,7 @@ const themeColors = {
   secondary: "#81C784", // Fresh green for secondary elements
   accent: "#FFEB3B", // Lemon yellow for highlights and accents
   background: "#F1F8E9", // Light mint background
-  surface: "#FFFFFF", // White surface for content areas
+  surface: "#2E7D32", // Dark green surface for content areas
   cardBg: "#FFFFFF", // White background for recipe cards
   textPrimary: "#212121", // Dark gray for primary text
   textSecondary: "#424242", // Medium gray for secondary text
