@@ -12,14 +12,14 @@ const themeColors = {
   secondary: "#81C784", // Fresh green for secondary elements
   accent: "#FFEB3B", // Lemon yellow for highlights and accents
   background: "#F1F8E9", // Light mint background
-  surface: "#2E7D32", // Dark green surface for content areas
+  surface: "#FFFFFF", // White surface for content areas
   cardBg: "#FFFFFF", // White background for recipe cards
   textPrimary: "#212121", // Dark gray for primary text
   textSecondary: "#424242", // Medium gray for secondary text
   border: "#C8E6C9", // Light green border
   hover: "#388E3C", // Deeper green for hover states
   danger: "#D32F2F", // Red for warnings/errors
-  success: "#FFFFFF", // White for success states
+  success: "#2E7D32", // Dark green for success states
   gradient: "linear-gradient(135deg, #4CAF50 0%, #81C784 100%)", // Green gradient
 }
 
