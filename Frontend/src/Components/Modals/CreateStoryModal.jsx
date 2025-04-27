@@ -180,7 +180,7 @@ const CreateStoryModal = () => {
             <BookOutlined style={{ color: 'white', fontSize: 16 }} />
           </div>
           <Title level={4} style={{ margin: 0, color: themeColors.textPrimary }}>
-            Create Learning Plan
+            Create a Learning Plan
           </Title>
         </div>
       }
@@ -310,6 +310,10 @@ const CreateStoryModal = () => {
                         }}
                         value={formData.timestamp}
                         onChange={handleDateChange}
+                        disabledDate={(current) => {
+                          // Disable all dates before today
+                          return current && current < moment().startOf('day');
+                        }}
                       />
                     </Form.Item>
                   </Col>
