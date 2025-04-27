@@ -50,25 +50,25 @@ const UserService = {
   },
 
   async getProfiles() {
-    try {
-      const accessToken = localStorage.getItem('accessToken');
-      if (!accessToken) {
-        throw new Error('Access token is missing.');
-      }
-  
-      const response = await axios.get(`${BASE_URL}/userProfiles`, {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-      });
-  
-      return response.data;
-    } catch (error) {
-      console.error('Error fetching user profiles:', error);
-      throw new Error('Failed to fetch user profiles.');
+  try {
+    const accessToken = localStorage.getItem('accessToken');
+    if (!accessToken) {
+      throw new Error('Access token is missing.');
     }
+
+    const response = await axios.get(`${BASE_URL}/userProfiles`, {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
+
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching user profiles:', error);
+    throw new Error('Failed to fetch user profiles.');
   }
-    
+},
+
   async getProfile() {
     const uid = localStorage.getItem("userId");
     const accessToken = localStorage.getItem("accessToken");
