@@ -20,7 +20,7 @@ const StoryBox = () => {
           <div class="story_upload">
             <img alt="alt-tag" src="image/upload.png" />
             <p class="story_tag" style={{ textAlign: "center", fontSize: 8 }}>
-              Create Learning story
+              Create a Learning story
             </p>
           </div>
         </div>

@@ -480,7 +480,7 @@ const CreateStoryModal = () => {
                             borderRadius: '8px'
                           }}
                         >
-                          Change Image
+                          Change an Image
                         </Button>
                       </Upload>
                     </div>
@@ -498,7 +498,7 @@ const CreateStoryModal = () => {
                     background: 'white'
                   }}>
                     {imageUploading ? (
-                      <Text>Uploading image...</Text>
+                      <Text>Uploading an image...</Text>
                     ) : (
                       <Upload
                         accept="image/*"
@@ -521,7 +521,7 @@ const CreateStoryModal = () => {
                           </div>
                           <div>
                             <Text style={{ fontSize: '14px', color: themeColors.textSecondary }}>
-                              Upload an image for your learning plan
+                              Upload an image for your learning plan.
                             </Text>
                           </div>
                           <Button
@@ -533,7 +533,7 @@ const CreateStoryModal = () => {
                               border: 'none'
                             }}
                           >
-                            Select Image
+                            Select an Image
                           </Button>
                         </div>
                       </Upload>
@@ -587,7 +587,7 @@ const CreateStoryModal = () => {
               height: '40px'
             }}
           >
-            Create Learning Plan
+            Create a Learning Plan
           </Button>
         </div>
       </Form>
