@@ -47,7 +47,7 @@ class LikeService {
   async deleteLike(likeId) {
     try {
       const accessToken = localStorage.getItem("accessToken");
-      const config = {
+      const config ={
         headers: {
           Authorization: `Bearer ${accessToken}`,
         },
