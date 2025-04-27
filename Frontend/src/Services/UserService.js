@@ -108,15 +108,16 @@ const UserService = {
   // Check if a user exists with the given OAuth provider and ID
   async checkIfOAuthUserExists(provider, providerId) {
     try {
-      const { data } = await axios.get(`${BASE_URL}/users/oauth`, {
+      const response = await axios.get(`${BASE_URL}/users/oauth`, {
         params: { provider, providerId },
       });
-      return data.exists === true;
+      return response.data.exists;
     } catch (error) {
-      console.error('Failed to check OAuth user existence:', error);
+      console.error('Error checking OAuth user existence:', error);
       return false;
     }
-  }  
+  },
+
 
   // Get user profile by OAuth provider and ID
   async getOAuthUserProfile(provider, providerId) {
