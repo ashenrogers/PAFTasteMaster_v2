@@ -92,7 +92,7 @@ const CreateMealPlanModal = () => {
             }} 
           />
           <Title level={4} style={{ margin: 0, color: themeColors.textPrimary }}>
-            Create Nutrition Plan
+            Create Learning Plan Sharing
           </Title>
         </div>
       }

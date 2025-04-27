@@ -127,7 +127,7 @@ const CreateStoryModal = () => {
         );
         setUploadedImage(url);
       } catch (error) {
-        console.error("Error uploading image:", error);
+        console.error("Error in uploading image:", error);
       } finally {
         setImageUploading(false);
       }
@@ -282,7 +282,7 @@ const CreateStoryModal = () => {
                       name="exerciseType"
                     >
                       <Input
-                        placeholder="e.g. Programming, Language"
+                        placeholder="e.g. Programming, Language, etc"
                         name="exerciseType"
                         value={formData.exerciseType}
                         onChange={handleInputChange}
@@ -301,7 +301,7 @@ const CreateStoryModal = () => {
                       name="timestamp"
                     >
                       <DatePicker
-                        placeholder="Select date"
+                        placeholder="Pick a date"
                         style={{ 
                           width: "100%", 
                           borderRadius: '8px', 
@@ -375,7 +375,7 @@ const CreateStoryModal = () => {
                       name="category"
                     >
                       <Select
-                        placeholder="Select category"
+                        placeholder="Select a category"
                         style={{ width: "100%" }}
                         value={formData.category}
                         onChange={handleCategoryChange}
