@@ -498,7 +498,7 @@ const CreateStoryModal = () => {
                     background: 'white'
                   }}>
                     {imageUploading ? (
-                      <Text>Uploading image...</Text>
+                      <Text>Uploading an image...</Text>
                     ) : (
                       <Upload
                         accept="image/*"
