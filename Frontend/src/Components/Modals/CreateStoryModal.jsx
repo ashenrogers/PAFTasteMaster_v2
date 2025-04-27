@@ -587,7 +587,7 @@ const CreateStoryModal = () => {
               height: '40px'
             }}
           >
-            Create Learning Plan
+            Create a Learning Plan
           </Button>
         </div>
       </Form>
