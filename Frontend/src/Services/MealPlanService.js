@@ -34,7 +34,7 @@ class MealPlanService {
       );
       return response.data;
     } catch (error) {
-      throw new Error("Failed to fetch Learning Progress");
+      throw new Error("Failed to fetch the Learning Progress");
     }
   }
 
