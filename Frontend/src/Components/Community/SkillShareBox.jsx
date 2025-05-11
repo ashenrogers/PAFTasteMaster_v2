@@ -5,7 +5,7 @@ import { useSnapshot } from "valtio";
 // Theme colors (matching the previous component)
 // Modern color scheme
 const themeColors = {
-  primary: "#4CA", // Basil green for primary actions
+  primary: "#4CAF50", // Basil green for primary actions
   secondary: "#81C784", // Fresh green for secondary elements
   accent: "#FFEB3B", // Lemon yellow for highlights and accents
   background: "#F1F8E9", // Light mint background
