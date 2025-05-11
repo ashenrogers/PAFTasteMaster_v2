@@ -18,6 +18,7 @@ const SkillShareService = {
       console.error("Error fetching Skill Shares:", error);
       throw error; // Throw the error to handle it in the component
     }
+    
   },
 
   // Get Skill Shares by user ID
