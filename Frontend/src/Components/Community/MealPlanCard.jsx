@@ -141,7 +141,7 @@ const MealPlanCard = ({ plan }) => {
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      bodyStyle={{ padding: 0 }}
+      styles={{ body: { padding: 0 } }}
     >
       {/* Modern Top Bar Design */}
       <div style={{
