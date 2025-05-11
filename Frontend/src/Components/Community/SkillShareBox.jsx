@@ -120,7 +120,6 @@ const SkillShareBox = () => {
           readOnly // Making input read-only since the whole component is clickable
           onClick={(e) => e.stopPropagation()} // Preventing input click from propagating
         />
-        
       </div>
     </div>
   );
