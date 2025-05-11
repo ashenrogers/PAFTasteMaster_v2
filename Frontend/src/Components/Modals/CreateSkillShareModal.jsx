@@ -34,39 +34,29 @@ const CreateSkillShareModal = () => {
   const [mediaFiles, setMediaFiles] = useState([]);
 
   const handleSubmit = async () => {
-  setLoading(true);
-  
-  const handleSubmit = async () => {
-    setLoading(true);
-    
     try {
+      setLoading(true);
       const values = await form.validateFields();
-  
-      const payload = {
+
+      // Call the service to create the Skill Share
+      await SkillShareService.createSkillShare({
         ...values,
         userId: snap.currentUser?.uid,
-        mediaUrls: mediaFiles.map(({ url }) => url),
-        mediaTypes: mediaFiles.map(({ type }) => type),
-      };
-  
-      await SkillShareService.createSkillShare(payload);
-  
+        mediaUrls: mediaFiles.map(file => file.url),
+        mediaTypes: mediaFiles.map(file => file.type)
+      });
       state.SkillShares = await SkillShareService.getAllSkillShares();
-  
-      // Reset the form and close the modal
+      
+      // Reset the form and close the modal on success
       form.resetFields();
       setMediaFiles([]);
       state.createSkillShareOpened = false;
-  
     } catch (error) {
-      console.error('Failed to create Skill Share:', error);
+      console.error("Error creating Skill Share:", error);
     } finally {
       setLoading(false);
     }
   };
-  
-};
-
 
   // Use a custom file input instead of Ant's Upload component to avoid duplication issues
   const handleFileInputChange = async (e) => {

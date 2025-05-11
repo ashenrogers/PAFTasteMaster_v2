@@ -1,14 +1,17 @@
-import React from "react";
-import ContactCard from "./ContactCard";
+import React from 'react';
+import ContactCard from './ContactCard';
 
-const Contacts = () => {
+const Contacts = ({ contacts }) => {
   return (
-    <div class="third_warpper">
-      <div class="contact_tag">
-        <h2>Contacts</h2>
-      </div>
-
-      <ContactCard />
+    <div style={{ padding: '20px' }}>
+      <h2 style={{ color: '#333', marginBottom: '20px' }}>Contact Messages</h2>
+      {contacts.length > 0 ? (
+        contacts.map(contact => (
+          <ContactCard key={contact.id} contact={contact} />
+        ))
+      ) : (
+        <p style={{ color: '#777' }}>No contact messages yet.</p>
+      )}
     </div>
   );
 };
