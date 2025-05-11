@@ -68,7 +68,7 @@ const ContactCard = () => {
           fontSize: '18px',
           fontWeight: 'bold',
           color: '#333'
-        }}>Senuda De Silva</p>
+        }}>Senu De Silva</p>
       </div>
 
       <form onSubmit={handleSubmit} style={{
