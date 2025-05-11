@@ -70,6 +70,7 @@ const SkillShareCard = ({ plan }) => {
             borderRadius: 8,
             cursor: "pointer" 
           }}
+          
         />
         <div className="media-overlay">
           <ExpandOutlined style={{ fontSize: 24, color: "white" }} />
