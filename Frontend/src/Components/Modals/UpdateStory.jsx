@@ -413,7 +413,7 @@ const UpdateStory = () => {
                 label={
                   <span style={{ display: 'flex', alignItems: 'center', color: themeColors.textPrimary }}>
                     <EditOutlined style={{ marginRight: '8px', color: themeColors.primary }} />
-                    Plan Title
+                    <b>Plan Title</b>
                   </span>
                 } 
                 name="title" 
@@ -506,6 +506,10 @@ const UpdateStory = () => {
                         }}
                         value={formData.timestamp}
                         onChange={handleDateChange}
+                        disabledDate={(current) => {
+                        // Disable all dates before today
+                        return current && current < moment().startOf('day');
+                       }}                          
                       />
                     </Form.Item>
                   </Col>
@@ -741,7 +745,7 @@ const UpdateStory = () => {
                   border: '1px solid rgba(59, 130, 246, 0.2)',
                 }}>
                   <Text style={{ color: themeColors.textSecondary, fontSize: '13px' }}>
-                    Adding an image will help you visualize your learning journey and stay motivated throughout the process.
+                  "By adding an image, you can turn your learning path into something you can actually see and feel proud of it's a great way to stay motivated!"
                   </Text>
                 </div>
               </div>
